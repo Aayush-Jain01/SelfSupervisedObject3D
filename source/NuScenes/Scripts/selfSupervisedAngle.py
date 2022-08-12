@@ -22,6 +22,7 @@ from torch.utils.data import Dataset
 from torchvision import transforms
 from torchvision.models import resnext50_32x4d
 
+#Why no MaskRCNN is used for 2D Detections in case of Self-Supervised training as mentioned in paper?
 ''' ======================================================================== '''
 ''' ------------------------- Command-line options ------------------------- '''
 ''' ======================================================================== '''
@@ -975,5 +976,3 @@ if __name__ == '__main__':
         main()
     except KeyboardInterrupt:
         pass
-
-
