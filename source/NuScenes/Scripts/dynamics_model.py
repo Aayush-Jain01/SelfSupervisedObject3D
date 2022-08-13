@@ -38,6 +38,10 @@ def example():
 	Q = np.array([[0.05, 0.05, 0.0], [0.05, 0.05, 0.0], [0.0, 0.0, 0.0]]) #Process noise
 	R = np.array([0.5]).reshape(1, 1) #Observation Noise
     
+    # Make these changes as you get depth map
+    # Qk = Qd[1−γQ/2*tanh(sd) + 1+γQ/2]
+    # R = Rd[1−γR/2*tanh(sd) + 1+γR/2]
+
     # Add x0 = Initial Positions of the Objects 
 	kf = KalmanFilter(F = F, B = B, H = H, Q = Q, R = R, x0)
 	predictions = []
